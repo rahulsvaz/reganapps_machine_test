@@ -1,7 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:reganapps_machine_test/features/auth/screens/login_screen/screens/login_screen.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main()async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -14,3 +20,5 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(home: LoginScreen(),);
   }
 }
+
+

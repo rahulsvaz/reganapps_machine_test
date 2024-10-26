@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -10,14 +9,14 @@ import '../../../../const/validators.dart';
 import '../../../../widgets/primary_button.dart';
 import '../../../../widgets/text_field.dart';
 
-class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({super.key});
+class ResetPassword extends StatefulWidget {
+  const ResetPassword({super.key});
 
   @override
-  State<ForgotPassword> createState() => _ForgotPasswordState();
+  State<ResetPassword> createState() => _ForgotPasswordState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
+class _ForgotPasswordState extends State<ResetPassword> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
 
@@ -31,8 +30,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               child: Lottie.asset(
                 LottieFiles.reset,
                 height: deviceHeight(context) * .30,
@@ -50,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               controller: _emailController,
               validator: Validators.emailValidator,
               contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
               label: "Email",
               labelStyle: TextStyleClass.bonaGray15,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -64,9 +62,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: PrimaryButton(
                 callBack: () {
-                  if (_formKey.currentState!.validate()) {
-
-                  }
+                  if (_formKey.currentState!.validate()) {}
                 },
                 backGroundColor: ColorsClass.primaryColorPurple,
                 labelColor: ColorsClass.white,
@@ -79,6 +75,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             setHeight(30),
             CupertinoButton(
               onPressed: () {
+                Navigator.pop(context);
               },
               child: const Text(
                 "Back To Login?",
