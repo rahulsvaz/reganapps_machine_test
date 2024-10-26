@@ -1,14 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
 import '../../../../const/colors_class.dart';
 import '../../../../const/lottie_class.dart';
 import '../../../../const/size.dart';
 import '../../../../const/text_style.dart';
 import '../../../../const/validators.dart';
 import '../../../../widgets/already_have_an_account_button.dart';
-import '../../../../widgets/color_border.dart';
 import '../../../../widgets/primary_button.dart';
 import '../../../../widgets/text_field.dart';
 
@@ -21,9 +18,12 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController(text: "mrsvaz@icloud.com");
-  final TextEditingController _passwordController = TextEditingController(text: "Readytorace");
-  final TextEditingController _nameController = TextEditingController(text: "rahul");
+  final TextEditingController _emailController =
+      TextEditingController(text: "mrsvaz@icloud.com");
+  final TextEditingController _passwordController =
+      TextEditingController(text: "Readytorace");
+  final TextEditingController _nameController =
+      TextEditingController(text: "rahul");
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               child: Lottie.asset(LottieFiles.signup,
                   height: deviceHeight(context) * .20),
             ),
@@ -44,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _nameController,
               validator: Validators.nameValidator,
               contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
               label: "Name",
               labelStyle: TextStyleClass.bonaGray15,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -58,7 +57,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _emailController,
               validator: Validators.emailValidator,
               contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
               label: "Email",
               labelStyle: TextStyleClass.bonaGray15,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -68,7 +67,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               borderRadius: BorderRadius.circular(16),
             ),
             setHeight(30),
-            PrimaryTextField(controller: _passwordController,
+            PrimaryTextField(
+              controller: _passwordController,
               validator: Validators.passwordValidator,
               surffix: IconButton(
                 icon: const Icon(
@@ -78,7 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 onPressed: () {},
               ),
               contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
               label: "Password",
               labelStyle: TextStyleClass.bonaGray15,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -91,10 +91,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: PrimaryButton(
-
                 callBack: () {
                   if (_formKey.currentState!.validate()) {
-
                   } else {}
                 },
                 backGroundColor: ColorsClass.primaryColorPurple,
@@ -105,11 +103,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 label: "SignUp",
               ),
             ),
-      setHeight(20),
+            setHeight(20),
             AlreadyHaveAnAccountButton(
               onTap: () {
                 Navigator.pop(context);
-
               },
             ),
           ],

@@ -2,17 +2,18 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:reganapps_machine_test/features/auth/screens/forgot_password/forgot_password.dart';
 import 'package:reganapps_machine_test/features/auth/screens/sign_up/sign_up_screen.dart';
 import '../../../../../const/colors_class.dart';
 import '../../../../../const/lottie_class.dart';
 import '../../../../../const/size.dart';
 import '../../../../../const/text_style.dart';
 import '../../../../../const/validators.dart';
+import '../../../../../widgets/color_border.dart';
 import '../../../../../widgets/dont_have_an_account.dart';
 import '../../../../../widgets/forgot_password.dart';
 import '../../../../../widgets/primary_button.dart';
 import '../../../../../widgets/text_field.dart';
+import '../../forgot_password/forgot_password.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -101,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 );
               },
             ),
+            setHeight(20),
             ForgotPassword(
               onTap: () {
                 Navigator.push(
@@ -109,8 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     builder: (context) => ResetPassword(),
                   ),
                 );
-              }
-              ,
+              },
             ),
           ],
         ),
