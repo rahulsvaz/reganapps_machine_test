@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDF5Z6yxO-W2FU4aU8jXtyl4E0Cmq8tBBA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>448212659414</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.reganappsMachineTest</string>
+	<key>PROJECT_ID</key>
+	<string>reganappsmachinetest</string>
+	<key>STORAGE_BUCKET</key>
+	<string>reganappsmachinetest.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:448212659414:ios:14c044cfed58dbb1106d77</string>
+</dict>
+</plist>

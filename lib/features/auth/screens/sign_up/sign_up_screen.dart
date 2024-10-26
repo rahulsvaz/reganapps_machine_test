@@ -105,22 +105,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 label: "SignUp",
               ),
             ),
-            setHeight(20),
-            const Text(
-              "Or",
-              style: TextStyleClass.bonaGreyBold16,
-            ),
-            setHeight(20),
-            ColorBorder(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                innerPadding: const EdgeInsets.all(10),
-                borderRadius: 16,
-                borderColor: ColorsClass.lightGray,
-                child:SizedBox()
-            ),
-            setHeight(20),
+      setHeight(20),
             AlreadyHaveAnAccountButton(
               onTap: () {
+                Navigator.pop(context);
 
               },
             ),
