@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -31,8 +30,7 @@ class _ForgotPasswordState extends State<ResetPassword> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               child: Lottie.asset(
                 LottieFiles.reset,
                 height: deviceHeight(context) * .30,
@@ -50,7 +48,7 @@ class _ForgotPasswordState extends State<ResetPassword> {
               controller: _emailController,
               validator: Validators.emailValidator,
               contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
               label: "Email",
               labelStyle: TextStyleClass.bonaGray15,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -64,9 +62,7 @@ class _ForgotPasswordState extends State<ResetPassword> {
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: PrimaryButton(
                 callBack: () {
-                  if (_formKey.currentState!.validate()) {
-
-                  }
+                  if (_formKey.currentState!.validate()) {}
                 },
                 backGroundColor: ColorsClass.primaryColorPurple,
                 labelColor: ColorsClass.white,
