@@ -10,14 +10,14 @@ import '../../../../const/validators.dart';
 import '../../../../widgets/primary_button.dart';
 import '../../../../widgets/text_field.dart';
 
-class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({super.key});
+class ResetPassword extends StatefulWidget {
+  const ResetPassword({super.key});
 
   @override
-  State<ForgotPassword> createState() => _ForgotPasswordState();
+  State<ResetPassword> createState() => _ForgotPasswordState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
+class _ForgotPasswordState extends State<ResetPassword> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
 
@@ -79,6 +79,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             setHeight(30),
             CupertinoButton(
               onPressed: () {
+                Navigator.pop(context);
               },
               child: const Text(
                 "Back To Login?",
